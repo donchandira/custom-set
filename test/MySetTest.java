@@ -8,7 +8,7 @@ public class MySetTest {
 	
 	@Before
 	public void runBefore(){
-		
+
 	}
 
 	@Test
@@ -19,6 +19,24 @@ public class MySetTest {
 	@Test
 	public void add() {
 		mySet.add("a");
+		mySet.add("b");
 		assertFalse(mySet.isEmpty());
+	}
+	
+	@Test
+	public void contains()
+	{
+		mySet.add("a");
+		mySet.add("b");
+		assertTrue(mySet.contains("b"));
+	}
+	
+	@Test
+	public void remove()
+	{
+		mySet.add("a");
+		mySet.add("b");
+		mySet.remove("a");
+		assertEquals(1, mySet.length());
 	}
 }
